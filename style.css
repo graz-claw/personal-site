@@ -197,181 +197,10 @@ body {
   gap: 10px;
 }
 
-/* Bivvi logo - CSS approximation. Replace with real logo:
-   Put bivvi-logo.png in assets/ folder and uncomment the <img> tag in index.html
-*/
-.logo-bivvi {
-  font-family: var(--font-sans);
-  font-size: 36px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 40%, #fde68a 70%, #f59e0b 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(1px 1px 0 #92400e);
-  font-style: normal;
-}
-
-/* Default: show CSS fallback if no image */
 .card-logo img {
   height: 32px;
   width: auto;
   object-fit: contain;
-  display: none; /* Hidden until you drop the real logo file */
-}
-
-.bivvi-logo-fallback {
-  height: 32px;
-  width: auto;
-  object-fit: contain;
-}
-
-.card-logo img.bivvi-logo-fallback[src="assets/bivvi-logo.png"] {
-  display: block;
-}
-
-/* Summa logo */
-.logo-summa {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-shape {
-  width: 32px;
-  height: 18px;
-  border-radius: 6px;
-}
-
-.shape-1 {
-  background: linear-gradient(135deg, #3b82f6, #06b6d4);
-  transform: rotate(-15deg) translateY(-4px);
-}
-
-.shape-2 {
-  background: linear-gradient(135deg, #f59e0b, #f97316);
-  transform: rotate(-15deg) translateY(4px);
-}
-
-.logo-text {
-  font-family: var(--font-sans);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  color: #0f172a;
-}
-
-/* TXR Studio logo */
-.logo-txr {
-  display: flex;
-  font-family: var(--font-sans);
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1;
-  color: #0f172a;
-  gap: 2px;
-}
-
-.logo-txr span:nth-child(2) {
-  background: linear-gradient(180deg, #3b82f6, #2563eb);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.logo-sub {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #2563eb;
-  margin-top: 2px;
-}
-
-/* Everyday Chaplet logo */
-.logo-chaplet {
-  position: relative;
-  width: 72px;
-  height: 72px;
-  flex-shrink: 0;
-}
-
-.circle {
-  position: absolute;
-  border-radius: 50%;
-}
-
-.circle-yellow {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #fde68a, #fbbf24);
-  top: 0;
-  left: 0;
-}
-
-.circle-blue {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #93c5fd, #60a5fa);
-  bottom: 0;
-  right: 0;
-}
-
-.circle-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 700;
-  color: #0f172a;
-  letter-spacing: 0.02em;
-}
-
-/* GRC Podcast logo */
-.logo-podcast {
-  position: relative;
-  width: 72px;
-  height: 72px;
-  flex-shrink: 0;
-}
-
-.podcast-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  overflow: hidden;
-  display: flex;
-}
-
-.podcast-segment {
-  flex: 1;
-  height: 100%;
-}
-
-.seg-1 { background: #2d8a3e; }
-.seg-2 { background: #eab308; }
-.seg-3 { background: #ef4444; }
-
-.podcast-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 800;
-  color: #0f172a;
-  letter-spacing: 0.02em;
-  z-index: 1;
-  text-shadow: 0 0 6px rgba(255,255,255,0.7);
 }
 
 /* ── Card Body ──────────────────────────────────────── */
@@ -387,13 +216,8 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 10px;
+  color: var(--text-muted);
 }
-
-.accent-bivvi + .card-body .card-tag { color: var(--accent-bivvi); }
-.accent-summa + .card-body .card-tag { color: var(--accent-summa); }
-.accent-txr + .card-body .card-tag { color: var(--accent-txr); }
-.accent-chaplet + .card-body .card-tag { color: var(--accent-chaplet); }
-.accent-podcast + .card-body .card-tag { color: var(--accent-podcast); }
 
 .card-title {
   font-size: 22px;
