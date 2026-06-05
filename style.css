@@ -350,6 +350,23 @@ body {
   outline-offset: 2px;
 }
 
+/* ── Logo ─────────────────────────────────── */
+.project-logo {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 28px 28px 28px 28px;
+  width: 200px;
+  border-right: 1px solid var(--border);
+}
+
+.project-logo img {
+  max-height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
 .project-meta {
   flex: 1;
   padding: 28px 32px 30px;
@@ -496,6 +513,15 @@ body {
 
   .project-card {
     border-left: 2px solid var(--accent-color, var(--accent));
+  }
+
+  .project-logo {
+    width: 120px;
+    padding: 16px;
+  }
+
+  .project-logo img {
+    max-height: 80px;
   }
 
   .project-meta {
