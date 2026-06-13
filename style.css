@@ -445,6 +445,17 @@ body {
   margin-bottom: 8px;
 }
 
+.design-note ul {
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 4px 0 10px 18px;
+}
+
+.design-note li {
+  padding-left: 2px;
+}
+
 .design-note p:last-child {
   margin-bottom: 0;
 }
