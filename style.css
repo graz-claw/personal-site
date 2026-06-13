@@ -211,8 +211,8 @@ body {
   line-height: 1.65;
 }
 
-/* ── Things I Believe ───────────────────────── */
-.beliefs-section {
+/* ── Principles ─────────────────────────────── */
+.principles-section {
   background: var(--bg-section);
   padding: 80px 0;
   margin: 0 -24px;
@@ -220,30 +220,60 @@ body {
   padding-right: 24px;
 }
 
-.beliefs-grid {
+.principles-section .section-header {
+  max-width: 760px;
+  margin: 0 auto 18px;
+}
+
+.principles-intro {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.65;
+  margin: 0 auto 34px;
+  max-width: 760px;
+}
+
+.principles-list {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.principle-item {
+  border-top: 1px solid var(--border);
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  gap: 28px;
+  grid-template-columns: 96px 1fr;
+  padding: 26px 0;
 }
 
-.belief-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px 28px;
-  transition: all 0.2s ease;
+.principle-item:last-child {
+  border-bottom: 1px solid var(--border);
 }
 
-.belief-card:hover {
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
-
-.belief-title {
-  font-size: 15px;
+.principle-number {
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  font-size: 30px;
   font-weight: 500;
-  line-height: 1.5;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.principle-copy h3 {
   color: var(--text);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.principle-copy p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.65;
+  max-width: 560px;
 }
 
 /* ── Philosophy ────────────────────────────── */
@@ -615,13 +645,28 @@ body {
     margin: 28px auto 0;
   }
 
-  .beliefs-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .beliefs-section {
+  .principles-section {
     padding: 60px 20px;
     margin: 0 -24px;
+  }
+
+  .principles-section .section-header,
+  .principles-intro,
+  .principles-list {
+    max-width: 640px;
+  }
+
+  .principle-item {
+    grid-template-columns: 72px 1fr;
+    gap: 20px;
+  }
+
+  .principle-number {
+    font-size: 25px;
+  }
+
+  .principle-copy h3 {
+    font-size: 18px;
   }
 
   .philosophy-section {
@@ -731,16 +776,31 @@ body {
     font-size: 13px;
   }
 
-  .beliefs-section {
+  .principles-section {
     padding: 48px 16px;
     margin: 0 -24px;
   }
 
-  .belief-card {
-    padding: 20px 22px;
+  .principles-intro {
+    font-size: 14px;
+    margin-bottom: 26px;
   }
 
-  .belief-title {
+  .principle-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 22px 0;
+  }
+
+  .principle-number {
+    font-size: 18px;
+  }
+
+  .principle-copy h3 {
+    font-size: 17px;
+  }
+
+  .principle-copy p {
     font-size: 14px;
   }
 
@@ -782,20 +842,18 @@ body {
   .pillar-card:nth-child(2) { animation-delay: 0.1s; }
   .pillar-card:nth-child(3) { animation-delay: 0.15s; }
 
-  .belief-card {
+  .principle-item {
     opacity: 0;
     transform: translateY(16px);
     animation: fadeUp 0.4s ease forwards;
   }
 
-  .belief-card:nth-child(1) { animation-delay: 0.05s; }
-  .belief-card:nth-child(2) { animation-delay: 0.08s; }
-  .belief-card:nth-child(3) { animation-delay: 0.11s; }
-  .belief-card:nth-child(4) { animation-delay: 0.14s; }
-  .belief-card:nth-child(5) { animation-delay: 0.17s; }
-  .belief-card:nth-child(6) { animation-delay: 0.2s; }
-  .belief-card:nth-child(7) { animation-delay: 0.23s; }
-  .belief-card:nth-child(8) { animation-delay: 0.26s; }
+  .principle-item:nth-child(1) { animation-delay: 0.05s; }
+  .principle-item:nth-child(2) { animation-delay: 0.08s; }
+  .principle-item:nth-child(3) { animation-delay: 0.11s; }
+  .principle-item:nth-child(4) { animation-delay: 0.14s; }
+  .principle-item:nth-child(5) { animation-delay: 0.17s; }
+  .principle-item:nth-child(6) { animation-delay: 0.2s; }
 }
 
 @keyframes fadeUp {
