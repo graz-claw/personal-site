@@ -303,6 +303,86 @@ body {
   font-size: 14px;
 }
 
+/* ── AI Philosophy ─────────────────────────── */
+.ai-section {
+  background: var(--bg-section);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  margin: 0 -24px;
+  padding: 80px 24px;
+}
+
+.ai-container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.ai-section .section-label {
+  display: block;
+  margin-bottom: 18px;
+}
+
+.ai-quote {
+  border-left: 3px solid var(--accent);
+  color: var(--text);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.18;
+  margin: 0 0 36px;
+  padding-left: 26px;
+}
+
+.ai-body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px 28px;
+  margin-bottom: 34px;
+}
+
+.ai-body p {
+  color: var(--text-muted);
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.ai-callouts {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  gap: 0;
+  margin: 0 0 34px;
+}
+
+.ai-callouts p {
+  color: var(--text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 16px 0 16px 28px;
+  position: relative;
+}
+
+.ai-callouts p + p {
+  border-top: 1px solid var(--border);
+}
+
+.ai-callouts p::before {
+  content: '→';
+  color: var(--text-subtle);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  left: 0;
+  position: absolute;
+  top: 18px;
+}
+
+.ai-body-secondary {
+  grid-template-columns: 1fr;
+  margin-bottom: 0;
+  max-width: 660px;
+}
+
 /* ── Work Section ──────────────────────────── */
 .work-section {
   padding: 80px 0 100px;
@@ -558,6 +638,28 @@ body {
 
   .philosophy-questions {
     font-size: 14px;
+  }
+
+  .ai-section {
+    padding: 60px 20px;
+  }
+
+  .ai-quote {
+    font-size: 26px;
+    padding-left: 20px;
+  }
+
+  .ai-body {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .ai-body p {
+    font-size: 14px;
+  }
+
+  .ai-callouts p {
+    font-size: 15px;
   }
 
   .project-card {
